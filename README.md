@@ -55,7 +55,9 @@ GitHub allows us to create a pull request:<br>
 
 ### On the Repository Owner's Side:
 A pull request appears:<br>
-![Pull Request Notification](image-3.png)
+<p align="center">
+  <img src="image-3.png" alt="Pull Request Notification">
+</p>
 
 ### Opening the Pull Request:
 ![Open Pull Request](image-4.png)
