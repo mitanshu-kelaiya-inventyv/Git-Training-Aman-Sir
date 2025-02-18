@@ -1,87 +1,84 @@
-# Git-Training-Aman-Sir
+# Git Training - Aman Sir
 
-## Branches in git
+## Branches in Git
 Branches are an in-built feature in the Git Versioning System. Branches allow you to develop features, fix bugs, or safely experiment with new ideas in a contained area of your repository.
 
-
-## Creating branches
+## Creating Branches
 ```bash
-git branch <branch_name> 
+git branch <branch_name>
 
-git branch feature1 #this will create a branch named 'feature1'
+git branch feature1 # This will create a branch named 'feature1'
 ```
 
-To see all branches of current repo:
+To see all branches of the current repo:
 
 ```bash
-git branch  #this will display all branches
+git branch  # This will display all branches
 ```
 
-Creating branches with `git checkout`
-
-The other command used to create branches is `git checkout` 
+### Creating Branches with `git checkout`
+The other command used to create branches is `git checkout`:
 
 ```bash
-#syntax
-git checkout -b <branch_name> 
+# Syntax
+git checkout -b <branch_name>
 
-#example
-git checkout -b feature2 #this will create a branch named 'feature1'
+# Example
+git checkout -b feature2 # This will create a branch named 'feature2'
 ```
 
-## Branching example
-![alt text](<Screenshot 2025-02-03 161736.png>)
-<br>
-* **master**: Represents the production-ready code. All changes eventually merge into `master` after thorough testing.
-* **feature**: Used for developing new features or bug fixes.  Allows for isolated development without affecting the stable `master` branch.
-* **release**: A temporary branch created from `master` for preparing a release. It allows for final bug fixes or documentation updates before going live.
-**dev**: The primary integration branch for ongoing development. Feature branches are merged into `dev` for testing and stabilization before going to `master`.
+## Branching Example
+![Branching Example](<Screenshot 2025-02-03 161736.png>)
 
-* The graph visually represents the branching and merging process.
-* The different colors likely indicate different branches.
-* The tags on the nodes may represent commit hashes or branch names.
-* The commands on the left panel document the steps performed.
+- **master**: Represents the production-ready code. All changes eventually merge into `master` after thorough testing.
+- **feature**: Used for developing new features or bug fixes. Allows for isolated development without affecting the stable `master` branch.
+- **release**: A temporary branch created from `master` for preparing a release. It allows for final bug fixes or documentation updates before going live.
+- **dev**: The primary integration branch for ongoing development. Feature branches are merged into `dev` for testing and stabilization before going to `master`.
 
 
-## Pull request
+## Pull Request
 A Pull Request (PR) is a feature in version control systems like Git that allows developers to propose changes to a repository. It enables collaboration, review, and discussion before merging the changes into the main branch.
 
-#### If a non collaborator want to make changes in code: he/she needs to fork the repository first:<br>
-![alt text](image.png)
+### If a Non-Collaborator Wants to Make Changes:
+They need to fork the repository first:<br>
+![Fork Repository](image.png)
 
+### After Committing Updates in the Forked Repo:
+The non-collaborator needs to create a pull request:<br>
+![Create Pull Request](image-1.png)
 
-#### After commiting updates in existing code in forked repo, non-collaborator needs to create a pull request:<br>
-![alt text](image-1.png)
+### If There Are No Conflicts:
+GitHub allows us to create a pull request:<br>
+![No Conflicts](image-2.png)
 
-#### Since there is no code present which conflicts main repo of owner, GitHub allows us to create pull request:<br>
-![alt text](image-2.png)
+> **Note:** Only users with write access are allowed to merge pull requests.
 
-#### *Note:* Here it is mentioned that only ones who have write access are allowed to merge pull request.
+### On the Repository Owner's Side:
+A pull request appears:<br>
+![Pull Request Notification](image-3.png)
 
-#### Now on repo owner side: There is a pull request.<br>
-![alt text](image-3.png)
+### Opening the Pull Request:
+![Open Pull Request](image-4.png)
 
-#### Opening pull request:<br>
-![alt text](image-4.png)
+### The Owner Can Merge the Pull Request After Reviewing:
+![Merge Pull Request](image-5.png)
 
-#### The owner can merge pull request after reviewing it.<br>
-![alt text](image-5.png)
+### Updated Main Branch:
+![Updated Main Branch](image-6.png)
 
-#### Updated main branch:<br>
-![alt text](image-6.png)
+## Branching Rules
+Code owners can manage when a code should actually get merged into the repository.
 
+### Setting Up Branch Rules:
+In **Settings > Branches > Add Branch Ruleset**, you can add rulesets for your branches.
 
-# Branching Rules
-The code owners can manage when should a code actually ge meged in the repo:
+#### Step 1: Give a Ruleset Name
+![Ruleset Name](image-8.png)
 
-In *Settings>Branches>Add Branch Ruleset* you can add rulesets for your branches:
+#### Step 2: Set Target Branches
+Specify the branches on which you want to apply rules:<br>
+![Target Branches](image-9.png)
 
-Give a ruleset name:<br>
-![alt text](image-8.png)
-
-Set the target branches on which you want to apply rules:<br>
-![alt text](image-9.png)<br>
-
-Select required restrictions:<br>
-![alt text](image-10.png)
-![alt text](image-11.png)
+#### Step 3: Select Required Restrictions
+![Select Restrictions](image-10.png)
+![More Restrictions](image-11.png)
